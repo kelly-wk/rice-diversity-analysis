@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#4F7A5B">
+  <meta name="description" content="A repaired diversity analysis preserving accession identity across regression, PCA, clustering, and multi-axis validation.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="イネ多様性の多変量解析 / Multivariate Analysis of Rice Diversity">
+  <meta property="og:description" content="A repaired diversity analysis preserving accession identity across regression, PCA, clustering, and multi-axis validation.">
+  <meta property="og:url" content="https://kelly-wk.github.io/rice-diversity-analysis/">
+  <meta property="og:image" content="https://kelly-wk.github.io/rice-diversity-analysis/social-preview.svg">
+  <title>イネ多様性の多変量解析 / Multivariate Analysis of Rice Diversity</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="tier-public_case_study" style="--accent:#4F7A5B;--accent-dark:#252A32;--accent-soft:#E7F0E9;--hero-start:#252A32">
+  <a class="skip-link" href="#content">本文へ / Skip to content</a>
+  <header class="project-hero">
+    <div class="hero-inner">
+      <div class="hero-topline">
+        <div class="eyebrow">
+          <span>農業データ・バイオインフォマティクス / Agricultural Data &amp; Bioinformatics</span>
+        </div>
+        <p class="tier-badge"><span lang="ja">公開ケーススタディ</span><span lang="en">Public case study</span></p>
+      </div>
+      <h1><span lang="ja">イネ多様性の多変量解析</span><span lang="en">Multivariate Analysis of Rice Diversity</span></h1>
+      <div class="hero-summary">
+        <div class="copy-pair lede"><p lang="ja">アクセッションIDの整合性を修復し、回帰・PCA・クラスタリングを複数の妥当性軸で再評価した解析。</p><p class="translation" lang="en">A repaired diversity analysis preserving accession identity across regression, PCA, clustering, and multi-axis validation.</p></div>
+        <div class="hero-facts">
+          <dl class="project-meta">
+            <div><dt>状態 / Status</dt><dd><span lang="ja">解析設計修復済み・方法のみ公開</span><span lang="en">Analysis design repaired · methods only</span></dd></div>
+            <div><dt>言語 / Language</dt><dd>Python</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="method-block">
+        <p class="method-label">技術スタック / Tech Stack</p>
+        <ul class="method-list" aria-label="Methods"><li>Python</li><li>Robust regression</li><li>PCA</li><li>Bootstrap</li><li>k-means</li><li>k-medoids</li><li>Hierarchical clustering</li><li>Biological-label validation</li></ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="shell">
+    
+    <section aria-labelledby="highlights-title">
+      <div class="section-heading"><p>01</p><h2 id="highlights-title">主なポイント <span lang="en">Highlights</span></h2></div>
+      <div class="highlight-grid"><article class="highlight">
+          <span class="highlight-number" aria-hidden="true">1</span>
+          <div class="copy-pair"><p lang="ja">行番号とアクセッションIDを混同する結合バグを特定して修正。</p><p class="translation" lang="en">Identified and corrected a join bug that confused row numbers with accession IDs.</p></div>
+        </article><article class="highlight">
+          <span class="highlight-number" aria-hidden="true">2</span>
+          <div class="copy-pair"><p lang="ja">一対一結合で実在IDを全工程に保持し、サンプル追跡性を回復。</p><p class="translation" lang="en">Restored sample traceability by preserving real IDs through one-to-one joins.</p></div>
+        </article><article class="highlight">
+          <span class="highlight-number" aria-hidden="true">3</span>
+          <div class="copy-pair"><p lang="ja">内部指標、再標本化安定性、生物学的ラベル整合性を分けてクラスタを検証。</p><p class="translation" lang="en">Validated clusters separately by internal indices, resampling stability, and biological-label agreement.</p></div>
+        </article></div>
+    </section>
+
+    <section aria-labelledby="flow-title">
+      <div class="section-heading"><p>02</p><h2 id="flow-title">研究の流れ <span lang="en">Research Flow</span></h2></div>
+      <ol class="flow-grid"><li class="flow-card" data-step="1">
+              <h3><span lang="ja">課題</span><span lang="en">Problem</span></h3>
+              <div class="copy-pair"><p lang="ja">ID不整合を修復し、イネ多様性の低次元構造と群分けを過大解釈せず再評価する。</p><p class="translation" lang="en">Repair identifier integrity and reassess low-dimensional structure and grouping in rice diversity without overclaiming.</p></div>
+            </li><li class="flow-card" data-step="2">
+              <h3><span lang="ja">方法</span><span lang="en">Method</span></h3>
+              <div class="copy-pair"><p lang="ja">頑健回帰、PCA、複数クラスタ法を、ID保持パイプライン上で実行する。</p><p class="translation" lang="en">Run robust regression, PCA, and multiple clustering methods in an ID-preserving pipeline.</p></div>
+            </li><li class="flow-card" data-step="3">
+              <h3><span lang="ja">検証</span><span lang="en">Validation</span></h3>
+              <div class="copy-pair"><p lang="ja">ブートストラップ安定性、内部指標、既知ラベルとの対応を独立に確認する。</p><p class="translation" lang="en">Assess bootstrap stability, internal indices, and alignment with known labels independently.</p></div>
+            </li><li class="flow-card" data-step="4">
+              <h3><span lang="ja">成果</span><span lang="en">Outcome</span></h3>
+              <div class="copy-pair"><p lang="ja">追跡可能な解析へ修復し、クラスタを真の分類ではなく探索的構造として報告。</p><p class="translation" lang="en">Restored a traceable analysis and reported clusters as exploratory structure rather than ground-truth classes.</p></div>
+            </li></ol>
+    </section>
+
+    <section class="limitations" aria-labelledby="limits-title">
+      <div class="section-heading"><p>03</p><h2 id="limits-title">限界と適用範囲 <span lang="en">Limitations &amp; Scope</span></h2></div>
+      <ul><li><div class="copy-pair"><p lang="ja">原データはCC BY-NC-ND 3.0条件で、ローカルの正規化データと派生数値を再配布できない。</p><p class="translation" lang="en">The source is under CC BY-NC-ND 3.0 terms, so local normalized data and derived numeric results are not redistributed.</p></div></li></ul>
+    </section>
+
+    <section class="publication" aria-labelledby="publication-title">
+      <div class="section-heading"><p>04</p><h2 id="publication-title">公開範囲 <span lang="en">Publication Boundary</span></h2></div>
+      <div class="publication-panel">
+        <p class="tier-badge"><span lang="ja">公開ケーススタディ</span><span lang="en">Public case study</span></p>
+        <div class="copy-pair"><p lang="ja">公開ページは方法と修復内容の要約のみ。非営利・改変禁止を含むライセンス境界のため、データ、実ID、コード、図、派生数値は公開しない。</p><p class="translation" lang="en">The public page contains only a method and repair summary. Because the license includes noncommercial and no-derivatives restrictions, data, real IDs, code, figures, and derived numbers are not published.</p></div>
+      </div>
+      <div class="cta-grid"><a class="cta" href="https://github.com/kelly-wk/rice-diversity-analysis"><strong lang="ja">リポジトリ</strong><span lang="en">Repository</span><span aria-hidden="true">↗</span></a><a class="cta" href="https://github.com/kelly-wk/rice-diversity-analysis/blob/main/CASE_STUDY.md"><strong lang="ja">レポート</strong><span lang="en">Report</span><span aria-hidden="true">↗</span></a><span class="cta is-disabled" aria-disabled="true"><strong lang="ja">再現手順</strong><span lang="en">Reproduce</span><small>この公開レベルでは利用できません / Not available at this publication tier</small></span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span lang="ja">公開レベルはページ上で常に明示されます。</span> <span lang="en">Publication tier is always shown explicitly.</span></p>
+    <p>kelly-wk · rice-diversity-analysis</p>
+  </footer>
+</body>
+</html>
